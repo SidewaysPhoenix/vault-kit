@@ -14,7 +14,9 @@ function App() {
 
   return (
     <main className="container">
-      <h1>Welcome to Tauri + React</h1>
+      <h1>Vault-Tec</h1>
+      
+      <h2>Welcomes you to Vault-Kit</h2>
 
       <div className="row">
         <a href="https://vite.dev" target="_blank">
