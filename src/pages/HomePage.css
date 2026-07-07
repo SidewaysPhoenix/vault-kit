@@ -1,0 +1,94 @@
+.homeTitle {
+  margin-bottom: clamp(32px, 5vw, 56px);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2.5vw, 24px);
+  
+}
+
+.logoRow h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  color: var(--accent-gold);
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.logo_vault-kit {
+  width: clamp(80px, 14vw, 140px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35));
+}
+
+.subtitle {
+  max-width: 680px;
+  margin: 18px auto 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.5;
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.homeCard {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    linear-gradient(180deg, rgba(111, 143, 95, 0.22), rgba(24, 28, 23, 1));
+
+  border: 1px solid rgba(215, 195, 106, 0.22);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 10px 24px rgba(0, 0, 0, 0.22);
+
+  padding: 24px;
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.homeCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215, 195, 106, 0.65);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.homeCard h2 {
+  margin: 0 0 10px;
+  color: var(--accent-gold);
+  font-size: 1.6rem;
+}
+
+.homeCard p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

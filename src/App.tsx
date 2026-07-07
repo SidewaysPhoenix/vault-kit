@@ -1,10 +1,9 @@
-
-import "./App.css";
-import HomePage from "./HomePage";
+import CharacterSelectionPage from "./pages/CharacterSelectionPage";
+//import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <HomePage />
+    <CharacterSelectionPage />
   );
 }
 

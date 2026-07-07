@@ -1,3 +1,4 @@
+import "./HomePage.css"
 import vaultkitLogo from "./assets/Vault-Kit Logo.svg";
 
 function HomePage() {

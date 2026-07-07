@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: system-ui, sans-serif;
+}
+
+.mainContainer {
+  width: min(1200px, calc(100% - 48px));
+  min-height: calc(100vh - 48px);
+  margin: 24px auto;
+  padding: clamp(24px, 4vw, 48px);
+
+  background:
+    radial-gradient(circle at top, rgba(111, 143, 95, 0.18), transparent 36%),
+    linear-gradient(180deg, #20251f 0%, #151714 100%);
+
+  border: 1px solid rgba(215, 195, 106, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+@media (max-width: 900px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .homeCard {
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    width: min(100% - 24px, 1200px);
+    min-height: calc(100vh - 24px);
+    margin: 12px auto;
+    padding: 24px 18px;
+  }
+
+  .logoRow {
+    flex-direction: column;
+  }
+
+  .logo_vault-kit {
+    width: 96px;
+  }
+}
