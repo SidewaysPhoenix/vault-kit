@@ -1,7 +1,11 @@
 import "./HomePage.css"
 import vaultkitLogo from "../assets/Vault-Kit Logo.svg";
 
-function HomePage() {
+type HomePageProps = {
+  onOpenCharacterSelection: () => void;
+};
+
+function HomePage({ onOpenCharacterSelection }: HomePageProps) {
   return (
     <main className="mainContainer">
       <header className="homeTitle">
@@ -23,7 +27,7 @@ function HomePage() {
       </header>
 
       <div className="homeGrid">
-        <section className="homeCard">
+        <section className="homeCard" onClick={onOpenCharacterSelection}>
           <h2>Characters</h2>
           <p>Create and manage player characters.</p>
         </section>
