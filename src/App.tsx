@@ -1,9 +1,10 @@
-import CharacterSelectionPage from "./pages/CharacterSelectionPage";
-//import HomePage from "./pages/HomePage";
+//import CharacterSelectionPage from "./pages/CharacterSelectionPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <CharacterSelectionPage />
+    //<CharacterSelectionPage />
+    <HomePage />
   );
 }
 

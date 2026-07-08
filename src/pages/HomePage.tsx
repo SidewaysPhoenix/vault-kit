@@ -1,5 +1,5 @@
 import "./HomePage.css"
-import vaultkitLogo from "./assets/Vault-Kit Logo.svg";
+import vaultkitLogo from "../assets/Vault-Kit Logo.svg";
 
 function HomePage() {
   return (

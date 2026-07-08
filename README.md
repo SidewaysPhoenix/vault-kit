@@ -1,2 +1,3 @@
-# FalloutRPG_Vault-Kit
-Fallout RPG 2D20 application for players and GM's
+# Vault-Kit
+
+A Fallout 2D20 desktop toolkit for players and GMs.
