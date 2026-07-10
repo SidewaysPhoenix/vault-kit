@@ -1,11 +1,8 @@
+import { Link } from "react-router";
 import "./HomePage.css"
 import vaultkitLogo from "../assets/Vault-Kit Logo.svg";
 
-type HomePageProps = {
-  onOpenCharacterSelection: () => void;
-};
-
-function HomePage({ onOpenCharacterSelection }: HomePageProps) {
+function HomePage() {
   return (
     <main className="mainContainer">
       <header className="homeTitle">
@@ -27,20 +24,21 @@ function HomePage({ onOpenCharacterSelection }: HomePageProps) {
       </header>
 
       <div className="homeGrid">
-        <section className="homeCard" onClick={onOpenCharacterSelection}>
+        <Link to="/characters" className="homeCard">
           <h2>Characters</h2>
           <p>Create and manage player characters.</p>
-        </section>
+        </Link>
 
-        <section className="homeCard">
+        <Link to="/compendium" className="homeCard">
           <h2>Compendium</h2>
           <p>Browse weapons, armor, perks, items, and creatures.</p>
-        </section>
+        </Link>
 
-        <section className="homeCard">
+        <Link to="/gm-tools" className="homeCard">
           <h2>GM Tools</h2>
           <p>Prepare NPCs, encounters, loot, and campaign notes.</p>
-        </section>
+        </Link>
+
       </div>
     </main>
   );

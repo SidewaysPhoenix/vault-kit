@@ -50,6 +50,8 @@
 }
 
 .homeCard {
+  text-decoration: none;
+  color: inherit;
   min-height: 180px;
   display: flex;
   flex-direction: column;

@@ -1,18 +1,14 @@
-import { useState } from "react";
+import { Route, Routes } from "react-router";
 import CharacterSelectionPage from "./pages/CharacterSelectionPage";
 import HomePage from "./pages/HomePage";
 
-type Page = "home" | "characterSelection";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-  if (currentPage === "characterSelection") {
-    return (<CharacterSelectionPage />
-    );
-  }
-
   return (
-    <HomePage onOpenCharacterSelection={() => setCurrentPage("characterSelection")} />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/characters" element={<CharacterSelectionPage />} />
+    </Routes>
   )
 }
 
