@@ -11,7 +11,7 @@ function PageHeader(props: PageHeaderProps) {
     return (
         <header className="pageHeader">
             <button
-                className="pageBackButton"
+                className="vaultButton pageBackButton"
                 type="button"
                 onClick={() => navigate(-1)}
             >

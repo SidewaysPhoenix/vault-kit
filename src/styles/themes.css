@@ -1,17 +1,224 @@
 :root {
-  --bg-main: #151714;
-  --bg-panel: #20251f;
-  --bg-card: #181c17;
+  /* Backgrounds */
+  --color-bg-page: #06131e;
+  --color-bg-shell: #0a2233;
+  --color-bg-shell-top: #0d2c41;
 
-  --border-muted: #3f4937;
+  /* Surfaces */
+  --color-surface: #0d2d42;
+  --color-surface-raised: #12394f;
+  --color-surface-hover: #17465e;
+  --color-surface-dark: #081d2b;
 
-  --text-main: #f2ead3;
-  --text-muted: #c8c0aa;
+  /* Fields */
+  --color-field: #efe1bd;
+  --color-field-hover: #f8edcf;
+  --color-field-border: #b7a979;
 
-  --accent-gold: #d7c36a;
-  --accent-green: #6f8f5f;
-  --accent-rust: #b66a3c;
+  /* Borders */
+  --color-border-dark: #04101a;
+  --color-border: #31576d;
+  --color-border-light: #547387;
+  --color-border-gold: #bca348;
 
-  --button-bg: #2f3a2d;
-  --button-hover: #3e4d39;
+  /* Text */
+  --color-text: #f1eee5;
+  --color-text-muted: #b8c7cf;
+  --color-text-subtle: #8198a5;
+  --color-text-dark: #17242c;
+
+  /* Brand accents */
+  --color-gold: #e4c84f;
+  --color-gold-muted: #c4a842;
+  --color-blue: #6ba4c6;
+  --color-green: #82a95f;
+  --color-red: #c85c50;
+  --color-orange: #d77a3f;
+
+  /* Game status colors */
+  --color-hp: var(--color-red);
+  --color-hp-bg: #542c2b;
+
+  --color-ap: var(--color-blue);
+  --color-ap-bg: #183b53;
+
+  --color-luck: var(--color-green);
+  --color-luck-bg: #29452f;
+
+  /* Buttons */
+  --color-button: #12394f;
+  --color-button-hover: #194b64;
+  --color-button-active: #205b77;
+
+  --color-button-primary: var(--color-gold);
+  --color-button-primary-hover: #efd969;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-shell: 18px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 20px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Shadows */
+  --shadow-card:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.28),
+    0 8px 18px rgba(0, 0, 0, 0.28);
+
+  --shadow-card-hover:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3),
+    0 14px 28px rgba(0, 0, 0, 0.36);
+
+  --shadow-shell:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 20px 55px rgba(0, 0, 0, 0.5);
+
+  /* Motion */
+  --transition-fast: 140ms ease;
+  --transition-standard: 180ms ease;
+
+    /* =========================================================
+     SURFACE GRADIENTS
+     ========================================================= */
+
+  --gradient-shell:
+    linear-gradient(
+      180deg,
+      var(--color-bg-shell-top) 0%,
+      var(--color-bg-shell) 100%
+    );
+
+  --gradient-surface:
+    linear-gradient(
+      180deg,
+      var(--color-surface-raised) 0%,
+      var(--color-surface-dark) 100%
+    );
+
+  --gradient-surface-hover:
+    linear-gradient(
+      180deg,
+      var(--color-surface-hover) 0%,
+      var(--color-surface) 100%
+    );
+
+  --gradient-field:
+    linear-gradient(
+      180deg,
+      var(--color-field-hover) 0%,
+      var(--color-field) 100%
+    );
+
+  --gradient-gold:
+    linear-gradient(
+      180deg,
+      var(--color-button-primary-hover) 0%,
+      var(--color-button-primary) 100%
+    );
+
+
+  /* =========================================================
+     TRANSPARENT ACCENTS
+     ========================================================= */
+
+  --color-gold-soft: rgba(228, 200, 79, 0.18);
+  --color-gold-faint: rgba(228, 200, 79, 0.08);
+
+  --color-blue-soft: rgba(107, 164, 198, 0.18);
+  --color-blue-faint: rgba(107, 164, 198, 0.08);
+
+  --color-white-soft: rgba(255, 255, 255, 0.07);
+  --color-black-soft: rgba(0, 0, 0, 0.28);
+
+
+  /* =========================================================
+     DIVIDERS
+     ========================================================= */
+
+  --color-divider: rgba(84, 115, 135, 0.55);
+  --color-divider-strong: rgba(84, 115, 135, 0.85);
+  --color-divider-gold: rgba(228, 200, 79, 0.45);
+
+
+  /* =========================================================
+     INTERACTION STATES
+     ========================================================= */
+
+  --color-focus-ring: rgba(228, 200, 79, 0.3);
+  --color-selected-bg: rgba(228, 200, 79, 0.12);
+  --color-disabled: #667984;
+  --color-disabled-bg: #102736;
+
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.6rem;
+  --font-size-2xl: 2rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  --letter-spacing-label: 0.06em;
+  --letter-spacing-title: 0.035em;
+
+
+  /* =========================================================
+     COMPONENT SPACING
+     ========================================================= */
+
+  --padding-card: 24px;
+  --padding-card-compact: 16px;
+  --padding-panel: 20px;
+  --padding-control-x: 12px;
+  --padding-control-y: 8px;
+
+  --gap-card: 20px;
+  --gap-section: 24px;
+  --gap-control: 8px;
+
+
+  /* =========================================================
+     CONTROL SIZES
+     ========================================================= */
+
+  --control-height-sm: 32px;
+  --control-height-md: 40px;
+  --control-height-lg: 48px;
+
+
+  /* =========================================================
+     ADDITIONAL SHADOWS
+     ========================================================= */
+
+  --shadow-inset:
+    inset 0 1px 0 var(--color-white-soft),
+    inset 0 -1px 0 var(--color-black-soft);
+
+  --shadow-control:
+    inset 0 1px 0 var(--color-white-soft),
+    0 3px 8px rgba(0, 0, 0, 0.24);
+
+  --shadow-focus:
+    0 0 0 3px var(--color-focus-ring);
+
+  --shadow-title:
+    0 3px 0 rgba(0, 0, 0, 0.38),
+    0 8px 18px rgba(0, 0, 0, 0.28);
 }

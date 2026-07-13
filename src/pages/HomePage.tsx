@@ -24,17 +24,17 @@ function HomePage() {
       </header>
 
       <div className="homeGrid">
-        <Link to="/characters" className="homeCard">
+        <Link to="/characters" className="vaultCard homeCard">
           <h2>Characters</h2>
           <p>Create and manage player characters.</p>
         </Link>
 
-        <Link to="/compendium" className="homeCard">
+        <Link to="/compendium" className="vaultCard homeCard">
           <h2>Compendium</h2>
           <p>Browse weapons, armor, perks, items, and creatures.</p>
         </Link>
 
-        <Link to="/gm-tools" className="homeCard">
+        <Link to="/gm-tools" className="vaultCard homeCard">
           <h2>GM Tools</h2>
           <p>Prepare NPCs, encounters, loot, and campaign notes.</p>
         </Link>

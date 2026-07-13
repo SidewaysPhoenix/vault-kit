@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router";
 
 import App from "./App";
-import "./styles/globals.css";
 import "./styles/themes.css";
+import "./styles/globals.css";
 
 
 
