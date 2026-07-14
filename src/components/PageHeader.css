@@ -4,45 +4,49 @@
   align-items: center;
   gap: 16px;
 
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  padding: 16px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  background: var(--color-bg-shell);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .pageBackButton {
   justify-self: start;
+
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  padding: 8px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
 }
 
-.pageBackButton:hover,
-.pageBackButton:focus-visible {
-  transform: translateX(-2px);
-}
-
-.pageBackButton:active {
-  transform: translateX(0);
+.pageBackButton:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 .pageTitle {
   margin: 0;
 
   color: var(--color-gold);
-
+  font-size: 2rem;
+  letter-spacing: 0.04em;
   text-align: center;
 }
 
 .pageHeaderRight {
   justify-self: end;
-}
-
-@media (max-width: 600px) {
-  .pageHeader {
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
-  }
-
-  .pageTitle {
-    font-size: 1.5rem;
-  }
-
-  .pageBackButton {
-    padding: 7px 10px;
-  }
 }

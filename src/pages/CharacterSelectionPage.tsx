@@ -1,17 +1,24 @@
 import { Link } from "react-router";
 import "./CharacterSelectionPage.css";
-import PageHeader from "../components/PageHeader";
+import PageLayout from "../components/PageLayout";
 
 
 
 function CharacterSelectionPage() {
   return (
     
-    <main className="mainContainer">
-        <PageHeader title="Characters" />
-        <div>
-        <p>Select a character to view their details.</p>
+    <PageLayout title="Characters">
+        <div className="characterToolbar">
+            <p className="characterPageHint">Select a character to view their details.</p>
+            <button className="vaultButton importCharacterButton">
+                Import Character
+            </button>
         </div>
+
+        
+        <button className="vaultButton createNewCharacterButton">
+            + Create Character
+        </button>
 
         <section className="vaultCard characterCard">
             <div className="characterInfo">
@@ -47,14 +54,13 @@ function CharacterSelectionPage() {
 
             <button
                 type="button"
-                className="vaultIconButton characterMenuButton"
+                className="vaultButton characterMenuButton"
                 aria-label="Open character menu"
             >
                 ⋮
             </button>
         </section>
-    </main>
-
+    </PageLayout>
   );
 }
 
