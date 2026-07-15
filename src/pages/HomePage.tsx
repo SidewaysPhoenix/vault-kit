@@ -4,7 +4,7 @@ import vaultkitLogo from "../assets/Vault-Kit Logo.svg";
 
 function HomePage() {
   return (
-    <main className="mainContainer">
+    <main className="mainContainer vaultSurface">
       <header className="homeTitle">
         <p className="eyebrow">Vault-Tec welcomes you to</p>
 

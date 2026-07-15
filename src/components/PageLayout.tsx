@@ -8,7 +8,7 @@ type PageLayoutProps = {
 
 function PageLayout(props: PageLayoutProps) {
     return (
-        <main className="pageLayout">
+        <main className="pageLayout vaultSurface">
             <PageHeader title={props.title} />
             
             <section className="pageContentPanel">

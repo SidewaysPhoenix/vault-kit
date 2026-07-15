@@ -121,13 +121,71 @@ small,
 }
 
 .statLabel {
-  color: var(--color-text-muted);
+  color: var(--color-text-text);
 
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-label);
   text-transform: uppercase;
 }
+
+.vaultSurface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.vaultSurface::before {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+
+  content: "";
+  pointer-events: none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .025' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0 0.03 0 0 0 .7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.85'/%3E%3C/svg%3E");
+
+  background-size: 700px 700px;
+  background-repeat: repeat;
+
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+}
+
+.vaultSurface::after {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+
+  content: "";
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 12% 20%,
+      rgba(20, 12, 4, 0.096),
+      transparent 1%
+    ),
+    radial-gradient(
+      ellipse at 84% 72%,
+      rgba(8, 5, 2, 0.068),
+      transparent 3%
+    ),
+    radial-gradient(
+      ellipse at 48% 92%,
+      rgba(40, 25, 8, 0.041),
+      transparent 1%
+    );
+
+  mix-blend-mode: multiply;
+}
+
+.vaultSurface > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 .mainContainer {
   width: min(1200px, calc(100% - 48px));
@@ -185,6 +243,7 @@ small,
 }
 */
 
+
 .vaultCard:hover,
 .vaultCard:focus-visible {
   transform: translateY(-2px);
@@ -195,8 +254,10 @@ small,
 }
 
 .vaultCard > * {
+  position: relative;
   z-index: 1;
 }
+
 
 .vaultButton {
   padding: 4px 8px;

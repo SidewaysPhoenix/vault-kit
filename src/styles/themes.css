@@ -1,11 +1,11 @@
 :root {
   /* Backgrounds */
-  --color-bg-page: #000000;
-  --color-bg-shell: #082030;
+  --color-bg-page: #041d2d;
+  --color-bg-shell: #132d41;
   --color-bg-shell-top: #0d2c41;
-  --color-bg-card: #122d43;
+  --color-bg-card: #071b29;
   --color-bg-card-hover: #183a55;
-
+  --color-bg-card-info: #102735;
   /* Surfaces */
   --color-surface: #0d2d42;
   --color-surface-raised: #12394f;
@@ -48,7 +48,7 @@
   --color-luck-bg: #29452f;
 
   /* Buttons */
-  --color-button: #172f40;
+  --color-button: #162d3e;
   --color-button-hover: #1f4056;
   --color-button-active: #102636;
 
