@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import "./CharacterSelectionPage.css";
 import PageLayout from "../components/PageLayout";
+import Card from "../components/Card"
 
 import reactlogo from "../assets/react.svg"
 
@@ -20,67 +21,133 @@ function CharacterSelectionPage() {
         <button className="vaultButton createNewCharacterButton">
             + Create Character
         </button>
-
-        <section className="vaultCard characterCard">
-            <div>
-                <h3 className="characterName">Character Name</h3>
-                
-            </div>
-            
-            <div className="characterInfo">  
-
-                <div className="characterImg">
-                    <img
-                        src={reactlogo}
-                        className="characterImg"
-                        alt="Character Image"
-                    />
-                </div>
-                    
-                <div className="characterMeta">
-                    <div className="characterTopItem">
-                        <p className="secondaryText characterLevel">Lvl 12</p>
+        
+        <Card title="">
+            <section className="vaultCard characterList">
+                <article className="characterRow">
+                    <div>
+                        <h3 className="characterName">Character Name</h3>
+                        
                     </div>
                     
-                    <div className="characterTopItem">
-                        <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
-                    </div>
-                    
-                    <div className="characterTopItem">
-                        <button
-                            type="button"
-                            className="vaultButton characterMenuButton"
-                            aria-label="Open character menu"
-                        >
-                            ⋮
-                        </button>
-                    </div>
+                    <div className="characterInfo">  
 
-                    
-                    <div className="specialBlock">
-                        <div className="specialLabels">
-                            <span className="statLabel">STR</span>
-                            <span className="statLabel">PER</span>
-                            <span className="statLabel">END</span>
-                            <span className="statLabel">CHA</span>
-                            <span className="statLabel">INT</span>
-                            <span className="statLabel">AGI</span>
-                            <span className="statLabel">LCK</span>
+                        <div className="characterImg">
+                            <img
+                                src={reactlogo}
+                                className="characterImg"
+                                alt="Character Image"
+                            />
                         </div>
-                
-                        <div className="specialScores">
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
-                            <span className="statValue">5</span>
+                            
+                        <div className="characterMeta">
+                            <div className="characterTopItem">
+                                <p className="secondaryText characterLevel">Lvl 12</p>
+                            </div>
+                            
+                            <div className="characterTopItem">
+                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
+                            </div>
+                            
+                            <div className="characterTopItem">
+                                <button
+                                    type="button"
+                                    className="vaultButton characterMenuButton"
+                                    aria-label="Open character menu"
+                                >
+                                    ⋮
+                                </button>
+                            </div>
+
+                            
+                            <div className="specialBlock">
+                                <div className="specialLabels">
+                                    <span className="statLabel">STR</span>
+                                    <span className="statLabel">PER</span>
+                                    <span className="statLabel">END</span>
+                                    <span className="statLabel">CHA</span>
+                                    <span className="statLabel">INT</span>
+                                    <span className="statLabel">AGI</span>
+                                    <span className="statLabel">LCK</span>
+                                </div>
+                        
+                                <div className="specialScores">
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </article>
+
+                <article className="characterRow">
+                    <div>
+                        <h3 className="characterName">Character Name</h3>
+                        
+                    </div>
+                    
+                    <div className="characterInfo">  
+
+                        <div className="characterImg">
+                            <img
+                                src={reactlogo}
+                                className="characterImg"
+                                alt="Character Image"
+                            />
+                        </div>
+                            
+                        <div className="characterMeta">
+                            <div className="characterTopItem">
+                                <p className="secondaryText characterLevel">Lvl 12</p>
+                            </div>
+                            
+                            <div className="characterTopItem">
+                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
+                            </div>
+                            
+                            <div className="characterTopItem">
+                                <button
+                                    type="button"
+                                    className="vaultButton characterMenuButton"
+                                    aria-label="Open character menu"
+                                >
+                                    ⋮
+                                </button>
+                            </div>
+
+                            
+                            <div className="specialBlock">
+                                <div className="specialLabels">
+                                    <span className="statLabel">STR</span>
+                                    <span className="statLabel">PER</span>
+                                    <span className="statLabel">END</span>
+                                    <span className="statLabel">CHA</span>
+                                    <span className="statLabel">INT</span>
+                                    <span className="statLabel">AGI</span>
+                                    <span className="statLabel">LCK</span>
+                                </div>
+                        
+                                <div className="specialScores">
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                    <span className="statValue">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </Card>
+        
     </PageLayout>
   );
 }

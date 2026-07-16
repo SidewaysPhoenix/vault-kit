@@ -22,22 +22,33 @@
   margin-bottom: 5px;
 }
 
-.characterCard {
-  display: row;
+.characterList {
   margin-top: 5px;
+}
 
-  align-items: center;
-
+.characterRow {
+  padding: 10px;
+  background: var(--color-bg-page);
   cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.characterRow + .characterRow {
+  border-top: 1px solid var(--color-border);
+}
+
+.characterRow:hover {
+  background: var(--color-bg-card-hover);
 }
 
 .characterInfo {
   display: grid;
   grid-template-columns: 20% 80%;
   min-height: 60px;
-  background: var(--color-bg-page);
-  border-top: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  
 }
 
 .characterName {
@@ -63,7 +74,7 @@
 
 .specialBlock {
   display: grid;
-   grid-column: 1 / -1;
+  grid-column: 1 / -1;
   gap: 3px;
   background: var(--color-bg-shell);
   padding: 5px;
@@ -85,11 +96,18 @@
 }
 
 .characterImg {
-  height: 100%;
-  width: 100%;
-  align-content: center;
+  display: grid;
+  min-width: 0;
+  place-items: center;
   padding: 5px;
-  
+}
+
+.characterImg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 100px;
+  object-fit: contain;
 }
 
 .characterTopItem {
