@@ -1,3 +1,11 @@
+.mainContainer {
+  width: min(1200px, calc(100% - 48px));
+  min-height: calc(100vh - 48px);
+  margin: 24px auto;
+  padding: clamp(24px, 4vw, 48px);
+  /*background: var(--color-bg-shell);*/
+}
+
 .homeTitle {
   margin-bottom: clamp(var(--space-xl), 5vw, var(--space-2xl));
   text-align: center;
