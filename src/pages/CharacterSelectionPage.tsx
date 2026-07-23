@@ -3,8 +3,8 @@ import "./CharacterSelectionPage.css";
 import PageLayout from "../components/PageLayout";
 import Card from "../components/Card"
 
-import reactlogo from "../assets/react.svg"
-
+import vaultDwellerMale from "../assets/VaultDwellerMale.png"
+import vaultDwellerFemale from "../assets/VaultDwellerFemale.png"
 
 function CharacterSelectionPage() {
   return (
@@ -23,23 +23,22 @@ function CharacterSelectionPage() {
         </button>
         
         <Card title="">
-            <section className="vaultCard characterList">
+            <section className="characterList">
                 <article className="characterRow">
-                    <div>
-                        <h3 className="characterName">Character Name</h3>
-                        
-                    </div>
+                    
                     
                     <div className="characterInfo">  
-
-                        <div className="characterImg">
-                            <img
-                                src={reactlogo}
-                                className="characterImg"
-                                alt="Character Image"
-                            />
-                        </div>
+                        <div className="characterPortraitHeader">
                             
+                            <h4 className="characterName">Character Name</h4>
+                            
+                            <div className="characterImg">
+                                <img
+                                    src={vaultDwellerMale}
+                                    alt="Character Image"
+                                />
+                            </div>
+                        </div>
                         <div className="characterMeta">
                             <div className="characterTopItem">
                                 <p className="secondaryText characterLevel">Lvl 12</p>
@@ -86,21 +85,20 @@ function CharacterSelectionPage() {
                 </article>
 
                 <article className="characterRow">
-                    <div>
-                        <h3 className="characterName">Character Name</h3>
-                        
-                    </div>
+                    
                     
                     <div className="characterInfo">  
-
-                        <div className="characterImg">
-                            <img
-                                src={reactlogo}
-                                className="characterImg"
-                                alt="Character Image"
-                            />
-                        </div>
+                        <div className="characterPortraitHeader">
                             
+                            <h4 className="characterName">Character Name</h4>
+                            
+                            <div className="characterImg">
+                                <img
+                                    src={vaultDwellerFemale}
+                                    alt="Character Image"
+                                />
+                            </div>
+                        </div>
                         <div className="characterMeta">
                             <div className="characterTopItem">
                                 <p className="secondaryText characterLevel">Lvl 12</p>

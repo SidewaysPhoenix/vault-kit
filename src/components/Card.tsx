@@ -7,7 +7,7 @@ type CardHeaderProps = {
 
 function Card(props: CardHeaderProps) {
     return (
-        <div className="cardMain vaultCard">
+        <div className="cardMain">
             <h3 className="cardTitle">
                 {props.title}
             </h3>
