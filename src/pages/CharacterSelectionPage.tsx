@@ -25,10 +25,7 @@ function CharacterSelectionPage() {
             
         </div>
 
-        
-        
-        
-        <Card title="">
+        <Card title="Current Characters">
             <section className="characterList">
                 <article className="characterRow">
                     
@@ -67,23 +64,23 @@ function CharacterSelectionPage() {
                             
                             <div className="specialBlock">
                                 <div className="specialLabels">
-                                    <span className="statLabel">S</span>
-                                    <span className="statLabel">P</span>
-                                    <span className="statLabel">E</span>
-                                    <span className="statLabel">C</span>
-                                    <span className="statLabel">I</span>
-                                    <span className="statLabel">A</span>
-                                    <span className="statLabel">L</span>
+                                    <span className="statLabel specialLabel">S</span>
+                                    <span className="statLabel specialLabel">P</span>
+                                    <span className="statLabel specialLabel">E</span>
+                                    <span className="statLabel specialLabel">C</span>
+                                    <span className="statLabel specialLabel">I</span>
+                                    <span className="statLabel specialLabel">A</span>
+                                    <span className="statLabel specialLabel">L</span>
                                 </div>
                         
                                 <div className="specialScores">
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">5</span>
+                                    <span className="statValue specialValue">9</span>
+                                    <span className="statValue specialValue">7</span>
+                                    <span className="statValue specialValue">4</span>
                                 </div>
                             </div>
                         </div>

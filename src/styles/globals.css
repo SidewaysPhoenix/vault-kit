@@ -115,15 +115,15 @@ small,
 .statValue {
   color: var(--color-text-subtle);
 
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
   line-height: 1;
 }
 
 .statLabel {
   color: var(--color-text-text);
 
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--letter-spacing-label);
   text-transform: uppercase;
@@ -253,13 +253,15 @@ small,
 
 .vaultButton {
   padding: 4px 8px;
-  
+  width: fit-content;
+  height: var(--control-height-sm);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+
   background: var(--color-button);
   color: var(--color-text);
-
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-
   box-shadow: var(--shadow-card);
 
   cursor: pointer;
