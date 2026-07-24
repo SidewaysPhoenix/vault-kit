@@ -276,7 +276,7 @@ small,
 .vaultButton:hover,
 .vaultButton:focus-visible {
   background: var(--color-button-hover);
-  color: var(--color-gold);
+  color: var(--color-gold-muted);
 
   border-color: var(--color-border-gold);
   box-shadow: var(--shadow-card-hover);

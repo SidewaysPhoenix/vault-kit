@@ -9,18 +9,24 @@ import vaultDwellerFemale from "../assets/VaultDwellerFemale.png"
 function CharacterSelectionPage() {
   return (
     
-    <PageLayout title="Characters">
+    <PageLayout title="Character Selection">
         <div className="characterToolbar">
             <p className="characterPageHint">Select a character to view their details.</p>
-            <button className="vaultButton importCharacterButton">
-                Import Character
-            </button>
+            
+            <div className="toolbarActions">
+                <button className="vaultButton importCharacterButton">
+                    Import
+                </button>
+
+                <button className="vaultButton createNewCharacterButton">
+                    + Create Character
+                </button>
+            </div>
+            
         </div>
 
         
-        <button className="vaultButton createNewCharacterButton">
-            + Create Character
-        </button>
+        
         
         <Card title="">
             <section className="characterList">
@@ -30,7 +36,7 @@ function CharacterSelectionPage() {
                     <div className="characterInfo">  
                         <div className="characterPortraitHeader">
                             
-                            <h4 className="characterName">Character Name</h4>
+                            <h4 className="characterName">John Doe</h4>
                             
                             <div className="characterImg">
                                 <img
@@ -61,13 +67,13 @@ function CharacterSelectionPage() {
                             
                             <div className="specialBlock">
                                 <div className="specialLabels">
-                                    <span className="statLabel">STR</span>
-                                    <span className="statLabel">PER</span>
-                                    <span className="statLabel">END</span>
-                                    <span className="statLabel">CHA</span>
-                                    <span className="statLabel">INT</span>
-                                    <span className="statLabel">AGI</span>
-                                    <span className="statLabel">LCK</span>
+                                    <span className="statLabel">S</span>
+                                    <span className="statLabel">P</span>
+                                    <span className="statLabel">E</span>
+                                    <span className="statLabel">C</span>
+                                    <span className="statLabel">I</span>
+                                    <span className="statLabel">A</span>
+                                    <span className="statLabel">L</span>
                                 </div>
                         
                                 <div className="specialScores">
@@ -90,7 +96,7 @@ function CharacterSelectionPage() {
                     <div className="characterInfo">  
                         <div className="characterPortraitHeader">
                             
-                            <h4 className="characterName">Character Name</h4>
+                            <h4 className="characterName">Jane Doe</h4>
                             
                             <div className="characterImg">
                                 <img
@@ -121,13 +127,13 @@ function CharacterSelectionPage() {
                             
                             <div className="specialBlock">
                                 <div className="specialLabels">
-                                    <span className="statLabel">STR</span>
-                                    <span className="statLabel">PER</span>
-                                    <span className="statLabel">END</span>
-                                    <span className="statLabel">CHA</span>
-                                    <span className="statLabel">INT</span>
-                                    <span className="statLabel">AGI</span>
-                                    <span className="statLabel">LCK</span>
+                                    <span className="statLabel">S</span>
+                                    <span className="statLabel">P</span>
+                                    <span className="statLabel">E</span>
+                                    <span className="statLabel">C</span>
+                                    <span className="statLabel">I</span>
+                                    <span className="statLabel">A</span>
+                                    <span className="statLabel">L</span>
                                 </div>
                         
                                 <div className="specialScores">
