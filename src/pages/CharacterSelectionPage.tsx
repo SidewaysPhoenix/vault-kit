@@ -27,58 +27,61 @@ function CharacterSelectionPage() {
 
         <Card title="Current Characters">
             <section className="characterList">
-                <article className="characterRow">
-                    <div className="characterInfo">  
-                            <div className="characterImg">
-                                <img
-                                    src={vaultDwellerMale}
-                                    alt="Character Image"
-                                />
-                            </div>
+                <Link to="/characterSheet" className="characterCardLink">
+                    <article className="characterRow">
                         
-                        <div className="characterMeta">
-                            <div className="characterNameBar">
-                                <h3 className="characterName">Dallinar Nachtegaele</h3>
-                                <button
-                                    type="button"
-                                    className="vaultButton characterMenuButton"
-                                    aria-label="Open character menu"
-                                >
-                                    ⋮
-                                </button>
-                            </div>
-
-                            <div className="characterDetails">
-                                <p className="secondaryText characterLevel">Lvl 12</p>
-                                <p className="secondaryText characterBullet">•</p>
-                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
-                            </div>
-
-                            
-                            <div className="specialBlock">
-                                <div className="specialLabels">
-                                    <span className="statLabel specialLabel">S</span>
-                                    <span className="statLabel specialLabel">P</span>
-                                    <span className="statLabel specialLabel">E</span>
-                                    <span className="statLabel specialLabel">C</span>
-                                    <span className="statLabel specialLabel">I</span>
-                                    <span className="statLabel specialLabel">A</span>
-                                    <span className="statLabel specialLabel">L</span>
+                        <div className="characterInfo">  
+                                <div className="characterImg">
+                                    <img
+                                        src={vaultDwellerMale}
+                                        alt="Character Image"
+                                    />
                                 </div>
-                        
-                                <div className="specialScores">
-                                    <span className="statValue specialValue">6</span>
-                                    <span className="statValue specialValue">6</span>
-                                    <span className="statValue specialValue">6</span>
-                                    <span className="statValue specialValue">5</span>
-                                    <span className="statValue specialValue">9</span>
-                                    <span className="statValue specialValue">7</span>
-                                    <span className="statValue specialValue">4</span>
+                            
+                            <div className="characterMeta">
+                                <div className="characterNameBar">
+                                    <h3 className="characterName">Dallinar Nachtegaele</h3>
+                                    <button
+                                        type="button"
+                                        className="vaultButton characterMenuButton"
+                                        aria-label="Open character menu"
+                                    >
+                                        ⋮
+                                    </button>
+                                </div>
+
+                                <div className="characterDetails">
+                                    <p className="secondaryText characterLevel">Lvl 12</p>
+                                    <p className="secondaryText characterBullet">•</p>
+                                    <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
+                                </div>
+
+                                
+                                <div className="specialBlock">
+                                    <div className="specialLabels">
+                                        <span className="statLabel specialLabel">S</span>
+                                        <span className="statLabel specialLabel">P</span>
+                                        <span className="statLabel specialLabel">E</span>
+                                        <span className="statLabel specialLabel">C</span>
+                                        <span className="statLabel specialLabel">I</span>
+                                        <span className="statLabel specialLabel">A</span>
+                                        <span className="statLabel specialLabel">L</span>
+                                    </div>
+                            
+                                    <div className="specialScores">
+                                        <span className="statValue specialValue">6</span>
+                                        <span className="statValue specialValue">6</span>
+                                        <span className="statValue specialValue">6</span>
+                                        <span className="statValue specialValue">5</span>
+                                        <span className="statValue specialValue">9</span>
+                                        <span className="statValue specialValue">7</span>
+                                        <span className="statValue specialValue">4</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </Link>
 
                 <article className="characterRow">
                     <div className="characterInfo">  

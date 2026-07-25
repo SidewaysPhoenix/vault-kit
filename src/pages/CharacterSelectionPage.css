@@ -173,5 +173,9 @@
   color: #d7c36a;
 }
 
-
+.characterCardLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
 
