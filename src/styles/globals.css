@@ -149,7 +149,7 @@ small,
   background-size: 700px 700px;
   background-repeat: repeat;
 
-  opacity: 0.08;
+  opacity: 0.28;
   mix-blend-mode: multiply;
 }
 
@@ -165,17 +165,17 @@ small,
     radial-gradient(
       ellipse at 12% 20%,
       rgba(20, 12, 4, 0.096),
-      transparent 1%
+      transparent 43%
     ),
     radial-gradient(
       ellipse at 84% 72%,
       rgba(8, 5, 2, 0.068),
-      transparent 3%
+      transparent 36%
     ),
     radial-gradient(
       ellipse at 48% 92%,
       rgba(40, 25, 8, 0.041),
-      transparent 1%
+      transparent 50%
     );
 
   mix-blend-mode: multiply;

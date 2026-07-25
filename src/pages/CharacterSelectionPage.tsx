@@ -38,7 +38,7 @@ function CharacterSelectionPage() {
                         
                         <div className="characterMeta">
                             <div className="characterNameBar">
-                                <h3 className="characterName">John Doe</h3>
+                                <h3 className="characterName">Dallinar Nachtegaele</h3>
                                 <button
                                     type="button"
                                     className="vaultButton characterMenuButton"
