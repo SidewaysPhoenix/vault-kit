@@ -70,6 +70,7 @@
   
 }
 
+/*
 .characterPortraitHeader {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -77,11 +78,7 @@
   min-width: 0;
   min-height: 0;
 }
-
-.characterName {
-  margin: 0;
-  text-align: left;  
-}
+*/
 
 
 .characterImg {
@@ -89,6 +86,7 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
   object-position: top center;
+  align-self: center;
 }
 
 .characterImg img {
@@ -104,16 +102,42 @@
 
 .characterMeta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: auto 1fr;
-  gap: 10px;
+  grid-template-rows: 25% 25% auto;
   min-width: 0;
   padding: 8px;
-  align-self: center;
 }
 
 .characterMeta p {
   margin: 0;
+}
+
+.characterNameBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-content: center;
+  margin-left: 10px;
+}
+
+.characterName {
+  margin: 0;
+  text-align: left;  
+  align-content: center;
+}
+
+.characterMenuButton {
+  justify-self: end;
+  width: fit-content;
+  padding: 3px;
+}
+
+.characterDetails {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: left;
+  gap: 4px;
+  margin-left: 10px;
+  text-wrap-mode: nowrap;
 }
 
 .specialBlock {
@@ -121,6 +145,7 @@
   grid-column: 1 / -1;
   gap: 0px;
   padding: 5px;
+  align-items: center;
 }
 
 .specialLabels,
@@ -157,16 +182,7 @@
   border-right: none;
 }
 
-.characterMenuButton {
-  align-self: flex-end;
-  width: fit-content;
-  padding: 3px;
-}
 
-.characterTopItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-wrap-mode: nowrap;
-}
+
+
 

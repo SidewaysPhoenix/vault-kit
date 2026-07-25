@@ -28,30 +28,17 @@ function CharacterSelectionPage() {
         <Card title="Current Characters">
             <section className="characterList">
                 <article className="characterRow">
-                    
-                    
                     <div className="characterInfo">  
-                        <div className="characterPortraitHeader">
-                            
-                            <h4 className="characterName">John Doe</h4>
-                            
                             <div className="characterImg">
                                 <img
                                     src={vaultDwellerMale}
                                     alt="Character Image"
                                 />
                             </div>
-                        </div>
+                        
                         <div className="characterMeta">
-                            <div className="characterTopItem">
-                                <p className="secondaryText characterLevel">Lvl 12</p>
-                            </div>
-                            
-                            <div className="characterTopItem">
-                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
-                            </div>
-                            
-                            <div className="characterTopItem">
+                            <div className="characterNameBar">
+                                <h3 className="characterName">John Doe</h3>
                                 <button
                                     type="button"
                                     className="vaultButton characterMenuButton"
@@ -59,6 +46,12 @@ function CharacterSelectionPage() {
                                 >
                                     ⋮
                                 </button>
+                            </div>
+
+                            <div className="characterDetails">
+                                <p className="secondaryText characterLevel">Lvl 12</p>
+                                <p className="secondaryText characterBullet">•</p>
+                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
                             </div>
 
                             
@@ -88,30 +81,17 @@ function CharacterSelectionPage() {
                 </article>
 
                 <article className="characterRow">
-                    
-                    
                     <div className="characterInfo">  
-                        <div className="characterPortraitHeader">
-                            
-                            <h4 className="characterName">Jane Doe</h4>
-                            
                             <div className="characterImg">
                                 <img
                                     src={vaultDwellerFemale}
                                     alt="Character Image"
                                 />
                             </div>
-                        </div>
+                        
                         <div className="characterMeta">
-                            <div className="characterTopItem">
-                                <p className="secondaryText characterLevel">Lvl 12</p>
-                            </div>
-                            
-                            <div className="characterTopItem">
-                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
-                            </div>
-                            
-                            <div className="characterTopItem">
+                            <div className="characterNameBar">
+                                <h3 className="characterName">John Doe</h3>
                                 <button
                                     type="button"
                                     className="vaultButton characterMenuButton"
@@ -121,26 +101,32 @@ function CharacterSelectionPage() {
                                 </button>
                             </div>
 
+                            <div className="characterDetails">
+                                <p className="secondaryText characterLevel">Lvl 12</p>
+                                <p className="secondaryText characterBullet">•</p>
+                                <p className="secondaryText characterOrigin">Brotherhood Initiate</p>
+                            </div>
+
                             
                             <div className="specialBlock">
                                 <div className="specialLabels">
-                                    <span className="statLabel">S</span>
-                                    <span className="statLabel">P</span>
-                                    <span className="statLabel">E</span>
-                                    <span className="statLabel">C</span>
-                                    <span className="statLabel">I</span>
-                                    <span className="statLabel">A</span>
-                                    <span className="statLabel">L</span>
+                                    <span className="statLabel specialLabel">S</span>
+                                    <span className="statLabel specialLabel">P</span>
+                                    <span className="statLabel specialLabel">E</span>
+                                    <span className="statLabel specialLabel">C</span>
+                                    <span className="statLabel specialLabel">I</span>
+                                    <span className="statLabel specialLabel">A</span>
+                                    <span className="statLabel specialLabel">L</span>
                                 </div>
                         
                                 <div className="specialScores">
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
-                                    <span className="statValue">5</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">6</span>
+                                    <span className="statValue specialValue">5</span>
+                                    <span className="statValue specialValue">9</span>
+                                    <span className="statValue specialValue">7</span>
+                                    <span className="statValue specialValue">4</span>
                                 </div>
                             </div>
                         </div>
