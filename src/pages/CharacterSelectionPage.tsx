@@ -27,9 +27,8 @@ function CharacterSelectionPage() {
 
         <Card title="Current Characters">
             <section className="characterList">
-                <Link to="/characterSheet" className="characterCardLink">
                     <article className="characterRow">
-                        
+                        <Link to="/characterSheet" className="characterCardLink"/>
                         <div className="characterInfo">  
                                 <div className="characterImg">
                                     <img
@@ -81,9 +80,11 @@ function CharacterSelectionPage() {
                             </div>
                         </div>
                     </article>
-                </Link>
+                
 
+            
                 <article className="characterRow">
+                    <Link to="/characterSheet" className="characterCardLink"/>
                     <div className="characterInfo">  
                             <div className="characterImg">
                                 <img
@@ -134,7 +135,9 @@ function CharacterSelectionPage() {
                             </div>
                         </div>
                     </div>
+                    
                 </article>
+            
             </section>
         </Card>
         

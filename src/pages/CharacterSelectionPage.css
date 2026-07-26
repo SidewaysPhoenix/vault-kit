@@ -34,9 +34,9 @@
 }
 
 .characterRow {
+  position: relative;
   padding: 10px;
   cursor: pointer;
-
   transition:
     background-color var(--transition-fast),
     box-shadow var(--transition-fast);
@@ -45,18 +45,6 @@
 .characterRow + .characterRow {
   border-top: 1px solid var(--color-border);
 }
-
-/*
-.cardMain.vaultCard:hover,
-.cardMain.vaultCard:focus-visible {
-  border-color: var(--color-border);
-  transform: revert;
-  outline:none;
-  box-shadow: var(--shadow-card);
-  background: var(--color-bg-shell);
-
-}  
-*/
 
 
 .characterRow:hover {
@@ -67,18 +55,9 @@
   display: grid;
   grid-template-columns: 20% 80%;
   min-height: 60px;
+  position: relative;
   
 }
-
-/*
-.characterPortraitHeader {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  gap: 4px;
-  min-width: 0;
-  min-height: 0;
-}
-*/
 
 
 .characterImg {
@@ -107,13 +86,10 @@
   padding: 8px;
 }
 
-.characterMeta p {
-  margin: 0;
-}
-
 .characterNameBar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
   justify-content: space-between;
   align-content: center;
   margin-left: 10px;
@@ -123,12 +99,15 @@
   margin: 0;
   text-align: left;  
   align-content: center;
+  text-wrap-mode: nowrap;
 }
 
 .characterMenuButton {
   justify-self: end;
+  position: relative;
   width: fit-content;
   padding: 3px;
+  z-index: 2;
 }
 
 .characterDetails {
@@ -177,5 +156,9 @@
   display: block;
   color: inherit;
   text-decoration: none;
+  z-index: 1;
+  inset: 0;
+  position: absolute;
+  border-radius: inherit;
 }
 
