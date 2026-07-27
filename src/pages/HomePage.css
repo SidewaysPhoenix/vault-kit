@@ -69,7 +69,6 @@
   min-height: 180px;
   flex-direction: column;
   justify-content: center;
-
   padding: var(--padding-card);
 
   cursor: pointer;

@@ -282,7 +282,7 @@ small,
 
   border-color: var(--color-border-gold);
   box-shadow: var(--shadow-card-hover);
-
+  
   outline: none;
 }
 
