@@ -89,7 +89,7 @@
 .characterNameBar {
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   justify-content: space-between;
   align-content: center;
   margin-left: 10px;
@@ -125,7 +125,12 @@
   gap: 0px;
   padding: 5px;
   max-height: 65px;
+  box-shadow: var(--shadow-shell);
+  border-radius: var(--radius-sm);
+  width: 90%;
+  justify-self: center;
 }
+
 
 .specialLabels,
 .specialScores {
@@ -150,6 +155,28 @@
 
 .statValue.specialValue {
   color: #d7c36a;
+  
+}
+
+.specialLabels > * {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+
+.specialLabels > *::after {
+  content: "";
+  position: absolute;
+  left: 35%;
+  right: 35%;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-divider);
+}
+
+
+.specialScores > * {
+  padding-top: 6px;
 }
 
 .characterCardLink {
