@@ -54,7 +54,7 @@
 
 .characterInfo {
   display: grid;
-  grid-template-columns: minmax(110px, 20%) minmax(0, 1fr);
+  grid-template-columns: clamp(110px, 16vw, 250px) minmax(0, 1fr);
   min-height: 60px;
   position: relative;
   
@@ -88,26 +88,52 @@
 
 .characterNameBar {
   display: grid;
-  gap: 10px;
   grid-template-columns: minmax(0, 1fr) auto;
-  justify-content: space-between;
-  align-content: center;
+  align-items: center;
+  gap: 12px;
   margin-left: 10px;
 }
 
 .characterName {
+  min-width: 0;
   margin: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: left;  
   align-content: center;
   text-wrap-mode: nowrap;
+  font-size: clamp(1.1rem, 1.2vw, 1.6rem);
 }
 
-.characterMenuButton {
-  justify-self: end;
+.vaultButton.characterMenuButton {
   position: relative;
-  width: fit-content;
-  padding: 3px;
   z-index: 2;
+  justify-self: end;
+
+  width: clamp(28px, 1.6vw, 36px);
+  height: clamp(28px, 1.6vw, 36px);
+  padding: 0;
+
+  display: grid;
+  place-items: center;
+
+  font-size: clamp(1rem, 0.9vw, 1.25rem);
+
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+
+  color: var(--color-text-subtle);
+  opacity: 0.65;
+}
+
+.vaultButton.characterMenuButton:hover,
+.vautlButton.characterMenuButton:focus-visible {
+  opacity: 1;
+  background: var(--color-button-hover);
+  border-color: var(--color-border);
 }
 
 .characterDetails {
@@ -117,6 +143,11 @@
   gap: 4px;
   margin-left: 10px;
   text-wrap-mode: nowrap;
+  
+}
+
+.characterDetails .secondaryText {
+  font-size: clamp(0.85rem, 0.8vw, 1.1rem);
 }
 
 .specialBlock {
@@ -128,6 +159,7 @@
   box-shadow: var(--shadow-shell);
   border-radius: var(--radius-sm);
   width: 90%;
+   max-width: 900px;
   justify-self: center;
 }
 
@@ -151,11 +183,12 @@
 
 .statLabel.specialLabel {
   color: #d9e0e4;
+  font-size: clamp(0.9rem, 0.8vw, 1.15rem);
 }
 
 .statValue.specialValue {
   color: #d7c36a;
-  
+  font-size: clamp(0.85rem, 0.75vw, 1.05rem);
 }
 
 .specialLabels > * {

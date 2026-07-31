@@ -4,7 +4,7 @@
   --color-bg-shell: #132d41;
   --color-bg-shell-top: #0d2c41;
   --color-bg-card: #102735;
-  --color-bg-card-hover: #183a55;
+  --color-bg-card-hover: #142f45;
   --color-bg-card-info: #071b29;
   /* Surfaces */
   --color-surface: #0d2d42;
@@ -125,13 +125,6 @@
       180deg,
       var(--color-button-primary-hover) 0%,
       var(--color-button-primary) 100%
-    );
-
-    --gradient-card:
-    linear-gradient(
-      90deg,
-      var(--color-bg-card) 0%,
-      var(--color-bg-card-hover) 100%
     );
 
   /* =========================================================

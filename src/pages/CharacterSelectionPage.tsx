@@ -25,7 +25,7 @@ function CharacterSelectionPage() {
             
         </div>
 
-        <Card title="Current Characters">
+        <Card title="Characters">
             <section className="characterList">
                 <article className="characterRow">
                     <Link to="/characterSheet" className="characterCardLink"/>
