@@ -1,4 +1,5 @@
-type AmmoCrafting =
+/**
+type WeaponModCrafting =
   | {
       craftable: false;
       crafting?: never;
@@ -10,29 +11,32 @@ type AmmoCrafting =
           name: string;
           quantity: number;
         }[];
-        complexity: number;
+        
         skill: string;
-        requiredPerk?: string;
+        
         rarity: string;
       };
     };
+*/
 
-export type AmmoDefinition {
+export type WeaponModDefinition {
   id: string;
   name: string;
   book?: string;
   bookPg?: number;
-  description: string;
   
   effects?: {
     effectName?: string;
     effectDesc: string;
   }[];
   
+  complexity: number;
+  requiredPerk?: string;
   weight: number;
   weightDisplay?: string; //used if weight is <1 for display on card
   cost: number;
   rarity: number;
-  qtyFound: string;
+  namingPrefix: string;
+ 
 
-} & AmmoCrafting;
+} //& WeaponModCrafting;
