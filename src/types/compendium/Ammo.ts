@@ -17,7 +17,7 @@ type AmmoCrafting =
       };
     };
 
-export type AmmoDefinition {
+export type AmmoDefinition = {
   id: string;
   name: string;
   book?: string;

@@ -1,4 +1,6 @@
-/**
+import type { GameEffect } from "./rules/GameEffect";
+
+
 type WeaponModCrafting =
   | {
       craftable: false;
@@ -17,18 +19,15 @@ type WeaponModCrafting =
         rarity: string;
       };
     };
-*/
 
-export type WeaponModDefinition {
+
+export type WeaponModDefinition = {
   id: string;
   name: string;
   book?: string;
   bookPg?: number;
   
-  effects?: {
-    effectName?: string;
-    effectDesc: string;
-  }[];
+  effects?: GameEffect[];
   
   complexity: number;
   requiredPerk?: string;
@@ -39,4 +38,4 @@ export type WeaponModDefinition {
   namingPrefix: string;
  
 
-} //& WeaponModCrafting;
+} & WeaponModCrafting;
