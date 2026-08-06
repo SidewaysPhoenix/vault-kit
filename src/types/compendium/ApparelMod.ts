@@ -6,20 +6,20 @@ export type ApparelModDefinition = {
   namingPrefix: string;
  
   apparelModType:  "ballistic" |"vault jumpsuit";
-  location?: "head" | "torso" | "arms" | "legs" | "all";
+  location: "head" | "torso" | "arms" | "legs" | "all";
   
   effects?: GameEffect[];
   
-  weightOperation?: "add" | "subtract"; //used to determine how the mod affects the base apparel weight.
+  weightOperation: "add" | "subtract" | "none"; //used to determine how the mod affects the base apparel weight.
   weight: number;
   
-  costOperation?: "add" | "subtract"; //used to determine how the mod affects the base apparel cost.
+  costOperation: "add" | "subtract" | "none"; //used to determine how the mod affects the base apparel cost.
   cost: number;
   
   complexity: number;
-  requiredPerk?: string;
-  skill?: string;
-  rarity: number | string;
+  requiredPerk: string[];
+  skill: string;
+  rarity: string;
 
   book?: string;
   bookPg?: number;

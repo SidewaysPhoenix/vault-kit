@@ -6,20 +6,20 @@ export type ArmorModDefinition = {
   namingPrefix: string;
    
   armorModType:  "material" |"upgrade";
-  location?: "head" | "torso" | "arms" | "legs" | "all";
+  location: "head" | "torso" | "arms" | "legs" | "all";
   
   effects?: GameEffect[];
   
-  weightOperation?: "add" | "subtract"; //used to determine how the mod affects the base armor weight.
+  weightOperation: "add" | "subtract"| "none"; //used to determine how the mod affects the base armor weight.
   weight: number;
   
-  costOperation?: "add" | "subtract"; //used to determine how the mod affects the base armor cost.
+  costOperation: "add" | "subtract"| "none"; //used to determine how the mod affects the base armor cost.
   cost: number;
   
   complexity: number;
-  requiredPerk?: string;
-  skill?: string;
-  rarity: number | string;
+  requiredPerk: string[];
+  skill: string;
+  rarity: string;
 
   book?: string;
   bookPg?: number;

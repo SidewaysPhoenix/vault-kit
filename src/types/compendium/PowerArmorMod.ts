@@ -7,23 +7,23 @@ export type PowerArmorModDefinition = {
  
   
   powerArmorModType:  "plating" |"system" | "upgrade";
-  location?: "head" | "torso" | "arms" | "legs" | "all";
+  location: "head" | "torso" | "arms" | "legs" | "all";
   
   effects?: GameEffect[];
   
-  armorHPOperation?: "add" | "subtract"; //used to determine how the mod affects the base power armor piece armor HP.
+  armorHPOperation: "add" | "subtract" | "none"; //used to determine how the mod affects the base power armor piece armor HP.
   armorHP: number;
   
-  weightOperation?: "add" | "subtract"; //used to determine how the mod affects the base power armor piece weight.
+  weightOperation: "add" | "subtract" | "none"; //used to determine how the mod affects the base power armor piece weight.
   weight: number;
   
-  costOperation?: "add" | "subtract"; //used to determine how the mod affects the base power armor piece cost.
+  costOperation: "add" | "subtract" | "none"; //used to determine how the mod affects the base power armor piece cost.
   cost: number;
   
   complexity: number;
-  requiredPerk?: string;
-  skill?: string;
-  rarity: number | string;
+  requiredPerk: string[];
+  skill: string;
+  rarity: string;
 
   book?: string;
   bookPg?: number;

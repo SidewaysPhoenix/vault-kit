@@ -1,4 +1,4 @@
-import { GameEffect } from "./rules/GameEffect";
+import type { GameEffect } from "./rules/GameEffect";
 
 type AmmoCrafting =
   | {
@@ -14,7 +14,7 @@ type AmmoCrafting =
         }[];
         complexity: number;
         skill: string;
-        requiredPerk?: string;
+        requiredPerk: string[];
         rarity: string;
       };
     };

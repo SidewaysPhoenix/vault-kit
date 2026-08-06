@@ -4,21 +4,21 @@ export type RobotModDefinition = {
   id: string;
   name: string;
  
-  robotModType:  "module" |"vault jumpsuit" | "none";
-  location?: "optics" | "main body" | "arms" | "legs" | "thruster" | "all";
+  robotModType:  "module" | "none";
+  location: "optics" | "main body" | "arms" | "legs" | "thruster" | "all";
   
   effects?: GameEffect[];
   
-  weightOperation?: "add" | "subtract"; //used to determine how the mod affects the base robot armor weight.
+  weightOperation: "add" | "subtract"| "none"; //used to determine how the mod affects the base robot armor weight.
   weight: number;
   
-  costOperation?: "add" | "subtract"; //used to determine how the mod affects the base robot armor cost.
+  costOperation: "add" | "subtract"| "none"; //used to determine how the mod affects the base robot armor cost.
   cost: number;
   
   complexity: number;
-  requiredPerk?: string;
-  skill?: string;
-  rarity: number | string;
+  requiredPerk: string[];
+  skill: string;
+  rarity: string;
 
   book?: string;
   bookPg?: number;
