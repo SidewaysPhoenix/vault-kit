@@ -1,41 +1,26 @@
 import type { GameEffect } from "./rules/GameEffect";
 
-
-type WeaponModCrafting =
-  | {
-      craftable: false;
-      crafting?: never;
-    }
-  | {
-      craftable: true;
-      crafting: {
-        materials: {
-          name: string;
-          quantity: number;
-        }[];
-        
-        skill: string;
-        
-        rarity: string;
-      };
-    };
-
-
 export type WeaponModDefinition = {
   id: string;
   name: string;
-  book?: string;
-  bookPg?: number;
+  namingPrefix: string;
+ 
+  weaponModType:  "receiver" |"barrel" | "stock" |"capacitor" | "grip" | "magazine" | "sight" | "muzzle" | "dish" | "fuel" | "propellant tank" | "nozzle"| "concentrate" | "container" | "cannister";
   
   effects?: GameEffect[];
   
-  complexity: number;
-  requiredPerk?: string;
+  weightOperation?: "add" | "subtract"; //used to determine how the mod affects the base weapon weight.
   weight: number;
-  weightDisplay?: string; //used if weight is <1 for display on card
-  cost: number;
-  rarity: number;
-  namingPrefix: string;
- 
 
-} & WeaponModCrafting;
+  costOperation?: "add" | "subtract"; //used to determine how the mod affects the base weapon cost.  
+  cost: number;
+
+  
+  complexity: number;
+  skill: string;
+  requiredPerk?: string;
+  rarity: number | string;
+  
+  book?: string;
+  bookPg?: number;
+};

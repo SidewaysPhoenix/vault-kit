@@ -1,3 +1,5 @@
+import { GameEffect } from "./rules/GameEffect";
+
 type AmmoCrafting =
   | {
       craftable: false;
@@ -24,15 +26,12 @@ export type AmmoDefinition = {
   bookPg?: number;
   description: string;
   
-  effects?: {
-    effectName?: string;
-    effectDesc: string;
-  }[];
-  
+  effects?: GameEffect[];
+
   weight: number;
   weightDisplay?: string; //used if weight is <1 for display on card
   cost: number;
-  rarity: number;
+  rarity: number | string;
   qtyFound: string;
 
 } & AmmoCrafting;
