@@ -1,6 +1,6 @@
 import type { GameEffect } from "./rules/GameEffect";
 
-export type ConsumablesDefinition = {
+export type ConsumableDefinition = {
   id: string;
   name: string;
   consumablesType: "beverages" | "chems" | "food" | "other" | "unique items";
