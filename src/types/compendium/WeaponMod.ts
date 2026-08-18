@@ -18,7 +18,7 @@ export type WeaponModDefinition = {
   
   complexity: number;
   skill: string;
-  requiredPerk: string;
+  requiredPerk: string[];
   rarity: string;
   
   book?: string;
