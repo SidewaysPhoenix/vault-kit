@@ -1,4 +1,5 @@
 import { AmmoDefinition } from "./Ammo";
+import { Craftable } from "./rules/Crafting";
 import type { WeaponModDefinition } from "./WeaponMod";
 
 export type WeaponDefinition = {
@@ -26,4 +27,4 @@ export type WeaponDefinition = {
 
   book?: string;
   bookPg?: number;
-};
+} & Craftable;

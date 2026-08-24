@@ -1,3 +1,4 @@
+import { Craftable } from "./rules/Crafting";
 import type { GameEffect } from "./rules/GameEffect";
 
 export type GenericItemDefinition = {
@@ -13,4 +14,4 @@ export type GenericItemDefinition = {
 
   book?: string;
   bookPg?: number;
-};
+} & Craftable;

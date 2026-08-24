@@ -1,3 +1,4 @@
+import { Craftable } from "./rules/Crafting";
 import type { GameEffect } from "./rules/GameEffect";
 
 export type ConsumableDefinition = {
@@ -14,4 +15,4 @@ export type ConsumableDefinition = {
 
   book?: string;
   bookPg?: number;
-};
+} & Craftable;

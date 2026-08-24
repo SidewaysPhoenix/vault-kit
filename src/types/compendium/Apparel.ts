@@ -1,5 +1,6 @@
 import type { GameEffect } from "./rules/GameEffect";
 import type { ApparelModDefinition } from "./ApparelMod";
+import { Craftable } from "./rules/Crafting";
 
 export type ApparelDefinition = {
   id: string;
@@ -21,4 +22,4 @@ export type ApparelDefinition = {
 
   book?: string;
   bookPg?: number;
-};
+} & Craftable;
