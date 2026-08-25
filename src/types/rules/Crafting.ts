@@ -1,7 +1,7 @@
 export type CraftingData = {
-  materials?: {
+  materials: {
     name: string;
-    quantity: number;
+    qty: number;
   }[];
   complexity?: number;
   skill?: string;

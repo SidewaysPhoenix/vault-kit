@@ -1,0 +1,30 @@
+{
+    "id": "",
+    "name": "",
+    "book": "",
+    "bookPg": 0,
+    "description": "",
+    "effects" : [],
+
+    "weight" : 0,
+    "weightDisplay" : "",
+    "cost" : 0,
+    "rarity" : 0,
+    "qtyFoundBase" : 0,
+    "qtyFoundDiceRoll" : 0,
+    "qtyFoundMultiplier" : 1,
+
+    "craftable": true,
+    
+    "crafting" : {
+        "materials" : [{
+            "itemId" : "",
+            "name" : "",
+            "qty" : 0
+        }],
+        "complexity" : 0,
+        "skill" : "",
+        "requiredPerk" : [],
+        "rarity" : ""
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "id": "5mm",
+    "name": "5mm",
+    "book": "Fallout RPG Core Rulebook",
+    "bookPg": 93,
+    "description": "Small-caliber rifle rounds normally used by the military in miniguns. While supplies of these weapons are rare, they’re normally found in large quantities. The problem is that the weapons which use them consume ammunition at a prodigious rate, and a full box of 5mm rounds doesn’t last long.",
+    "effects" : [],
+
+    "weight" : 0.01,
+    "weightDisplay" : "<1",
+    "cost" : 1,
+    "rarity" : 3,
+    "qtyFoundBase" : 12,
+    "qtyFoundDiceRoll" : 6,
+    "qtyFoundMultiplier" : 10,
+
+    "craftable": false
+}

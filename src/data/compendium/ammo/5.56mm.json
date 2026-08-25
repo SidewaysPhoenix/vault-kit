@@ -1,0 +1,18 @@
+{
+    "id": "5.56mm",
+    "name": "5.56mm",
+    "book": "Fallout RPG Core Rulebook",
+    "bookPg": 93,
+    "description": "A lightweight, Accurate rifle round normally used in assault rifles. Developed centuries ago for the U.S. Army’s standard rifle of the era, 5.56mm rounds remained in production and use right up until the end of the Great War, and if you know where to look they’re easy enough to find.",
+    "effects" : [],
+
+    "weight" : 0.01,
+    "weightDisplay" : "<1",
+    "cost" : 2,
+    "rarity" : 3,
+    "qtyFoundBase" : 8,
+    "qtyFoundDiceRoll" : 4,
+    "qtyFoundMultiplier" : 1,
+
+    "craftable": false
+}

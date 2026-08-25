@@ -1,0 +1,18 @@
+{
+    "id": "",
+    "name": "",
+    "book": "",
+    "bookPg": 0,
+    "description": "",
+    "effects" : [],
+
+    "weight" : 0,
+    "weightDisplay" : "",
+    "cost" : 0,
+    "rarity" : 0,
+    "qtyFoundBase" : 0,
+    "qtyFoundDiceRoll" : 0,
+    "qtyFoundMultiplier" : 1,
+
+    "craftable": false
+}

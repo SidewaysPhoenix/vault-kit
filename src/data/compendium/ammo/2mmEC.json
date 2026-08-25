@@ -1,0 +1,19 @@
+{
+    "id": "2mmEC",
+    "name": "2mm EC",
+    "book": "Fallout RPG Core Rulebook",
+    "bookPg": 94,
+    "description": "The 2mm Electromagnetic Cartridge is a self-contained magazine containing high-velocity ferromagnetic projectiles and the battery pack necessary to power the gauss weapon they are fired from. \n\n This ammunition is not found loose, but in magazines containing the number of shots generated (and sufficient battery charge to power the weapon for those shots).",
+
+    "effects" : [],
+
+    "weight" : 0.01,
+    "weightDisplay" : "<1",
+    "cost" : 10,
+    "rarity" : 6,
+    "qtyFoundBase" : 6,
+    "qtyFoundDiceRoll" : 3,
+    "qtyFoundMultiplier" : 1,
+
+    "craftable" : false
+}

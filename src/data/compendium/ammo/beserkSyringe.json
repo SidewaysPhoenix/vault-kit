@@ -1,0 +1,64 @@
+{
+    "id": "beserkSyringe",
+    "name": "Beserk Syringe",
+    "book": "Fallout RPG Core Rulebook",
+    "bookPg": 93,
+    "description": "Syringer ammunition often hand-crafted by wasteland chemists. The effects listed may not apply more than once at the same time to a single target.",
+    
+    "effects" : [{
+        "effectName" : "Beserk",
+        "description" : "If one or more Effects are rolled for the weapon’s damage, the target becomes frenzied and berserk, attacking the nearest living creature (friend or foe) for the remainder of the scene.",
+        "target" : "",
+        "operation" : "",
+        "value" : "",
+        "durationUnit" : "scene",
+        "durationLength" : 1,
+
+        "triggerable" : true,
+
+        "trigger" : [{
+            "triggerEvent": "onDamage",
+            "requiredCount" : 1,
+            "target" : ""
+        },{
+            "triggerEvent": "effectRolled",
+            "requiredCount" : 1,
+            "target" : ""
+        }]
+    }],
+
+    "weight" : 0.01,
+    "weightDisplay" : "<1",
+    "cost" : 50,
+    "rarity" : 2,
+    "qtyFoundBase" : 4,
+    "qtyFoundDiceRoll" : 2,
+    "qtyFoundMultiplier" : 1,
+
+    "craftable": true,
+    
+    "crafting" : {
+        "materials" : [{
+            "itemId" : "uncommonMaterials",
+            "name" : "Uncommon Materials",
+            "qty" : 1
+        },{
+            "itemId" : "bourbon",
+            "name" : "Bourbon",
+            "qty" : 1
+        },{
+            "itemId" : "dirtyWater",
+            "name" : "Dirty Water",
+            "qty" : 1
+        },{
+            "itemId" : "commonMaterials",
+            "name" : "Common Materials",
+            "qty" : 1
+        }],
+        
+        "complexity" : 4,
+        "skill" : "Science",
+        "requiredPerk" : [],
+        "rarity" : "Common"
+    }
+}
