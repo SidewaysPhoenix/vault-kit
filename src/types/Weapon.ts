@@ -1,5 +1,5 @@
-import { AmmoDefinition } from "./Ammo";
-import { Craftable } from "./rules/Crafting";
+import type { AmmoDefinition } from "./Ammo";
+import type { Craftable } from "./rules/Crafting";
 import type { WeaponModDefinition } from "./WeaponMod";
 
 export type WeaponDefinition = {
