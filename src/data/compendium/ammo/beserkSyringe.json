@@ -8,15 +8,20 @@
     "effects" : [{
         "effectName" : "Beserk",
         "description" : "If one or more Effects are rolled for the weapon’s damage, the target becomes frenzied and berserk, attacking the nearest living creature (friend or foe) for the remainder of the scene.",
-        "target" : "",
+        "target" : "actionTarget",
+        "range" : "",
+        "rangeFilter" : "",
+        
+        "gameStat" : "",
         "operation" : "",
         "value" : "",
+        
         "durationUnit" : "scene",
         "durationLength" : 1,
 
         "triggerable" : true,
 
-        "trigger" : [{
+        "triggerEvents" : [{
             "triggerEvent": "onDamage",
             "requiredCount" : 1,
             "target" : ""
