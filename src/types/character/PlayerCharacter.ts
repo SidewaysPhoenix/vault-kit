@@ -57,7 +57,9 @@ export type CharacterApparel = {
   definitionId: ApparelDefinition["id"];
 
   equipped: boolean;
+  equippedLocation?: "head" | "torso" | "left arm" | "right arm" | "left leg" | "right leg" | "outfit";
   currentHP?: number;
+  
 
   installedMods: string[];
 };
@@ -77,21 +79,24 @@ export type PlayerCharacter = {
 
   name: string;
   playerName?: string;
+  origin?: string; //Swap string for origin type when implemented.
 
   level: number;
   xp?: number;
+  totalXP?: number;
 
   gender?: "male" | "female";
 
   special: SpecialStats;
   skills: PlayerSkills;
 
-  currentHP: number;
   maxHP: number;
+  currentHP: number;
+  rads: number;
 
   defense: number;
   initiative: number;
-  meleeDamage: number;
+  meleeDamageBonus: number;
 
   luckPoints?: number;
   caps: number;
