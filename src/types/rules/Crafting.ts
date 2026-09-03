@@ -1,5 +1,6 @@
 export type CraftingData = {
   materials: {
+    itemId: string;
     name: string;
     qty: number;
   }[];

@@ -9,7 +9,7 @@ export type ApparelDefinition = {
   itemCategory: "apparel";
   id: string;
   name: string;
-  apparelType: "armor" | "clothing" | "dog armor" | "headgear" | "outfits" | "power armor" | "robot armor";
+  apparelType: "armor" | "power armor" | "robot armor" | "clothing" | "headgear" | "outfits" | "dog armor";
   description: string;
 
   location: "head" | "torso" | "arms" | "legs" | "all";
@@ -22,12 +22,26 @@ export type ApparelDefinition = {
   cost: number;
   rarity: string;
 
-  allowedMods: 
-  | ApparelModDefinition["id"][]//Need to set validation against the list of ApparelModDefinition ids to ensure that only valid mods are applied to the apparel.
-  | ArmorModDefinition["id"][]
-  | PowerArmorModDefinition["id"][]
-  | RobotModDefinition["id"][]; 
-
   book?: string;
   bookPg?: number;
-} & Craftable;
+} & ApparelModCompatibility & Craftable;
+
+
+
+type ApparelModCompatibility =
+  | {
+      apparelType: "armor";
+      allowedMods: ArmorModDefinition["id"][];
+    }
+  | {
+      apparelType: "power armor";
+      allowedMods: PowerArmorModDefinition["id"][];
+    }
+  | {
+      apparelType: "robot armor";
+      allowedMods: RobotModDefinition["id"][];
+    }
+  | {
+      apparelType: "clothing" | "headgear" | "outfits" | "dog armor";
+      allowedMods: ApparelModDefinition["id"][];
+    };

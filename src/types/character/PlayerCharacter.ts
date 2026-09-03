@@ -9,43 +9,12 @@ import type { ApparelModDefinition } from "../ApparelMod";
 import type { ArmorModDefinition } from "../ArmorMod";
 import type { PowerArmorModDefinition } from "../PowerArmorMod";
 import type { RobotModDefinition } from "../RobotMod";
+import type { SpecialStats } from "../rules/SpecialStats";
+import type { SkillName, CharacterSkill } from "../rules/Skills";
 
-export type SpecialStats = {
-  STR: number;
-  PER: number;
-  END: number;
-  CHA: number;
-  INT: number;
-  AGI: number;
-  LCK: number;
-};
+//Weapon----------------------------------------------------------------------------------------------//
 
-export type Skill = {
-  rank: number;
-  tagged: boolean;
-};
-
-export type PlayerSkills = {
-  athletics: Skill;
-  barter: Skill;
-  bigGuns: Skill;
-  energyWeapons: Skill;
-  explosives: Skill;
-  lockpick: Skill;
-  medicine: Skill;
-  meleeWeapons: Skill;
-  pilot: Skill;
-  repair: Skill;
-  science: Skill;
-  smallGuns: Skill;
-  sneak: Skill;
-  speech: Skill;
-  survival: Skill;
-  throwing: Skill;
-  unarmed: Skill;
-};
-
-export type CharacterWeapon = {
+export type PlayerCharacterWeapon = {
   instanceId: string; //Unique identifier for this specific instance of the weapon item. This is used to track the item in the character's inventory and to differentiate between multiple instances of the same weapon item. Ex: "weapon-001"
   definitionId: WeaponDefinition["id"];
 
@@ -56,47 +25,76 @@ export type CharacterWeapon = {
   installedMods: WeaponModDefinition["id"][];
 };
 
-export type CharacterApparel = {
+//Apparel----------------------------------------------------------------------------------------------//
+
+type PlayerCharacterApparelBase = {
   instanceId: string; //Unique identifier for this specific instance of the apparel item. This is used to track the item in the character's inventory and to differentiate between multiple instances of the same apparel item. Ex: "apparel-001"
+
   definitionId: ApparelDefinition["id"];
 
   equipped: boolean;
-  side?: "left" | "right";
-  
+  equippedSide?: "left" | "right";
+
   currentHP?: number; //If apparel has HP, this is the current HP of the item.
   physicalDRReduction?: number;
   energyDRReduction?: number;
   radiationDRReduction?: number;
-
-  installedMods: 
-  | ApparelModDefinition["id"][]//Need to set validation against the list of ApparelModDefinition ids to ensure that only valid mods are applied to the apparel.
-  | ArmorModDefinition["id"][]
-  | PowerArmorModDefinition["id"][]
-  | RobotModDefinition["id"][];
 };
 
-export type CharacterAmmo = {
+export type PlayerCharacterApparel =
+  PlayerCharacterApparelBase &
+  (
+    | {
+        apparelType: "armor";
+        installedMods: ArmorModDefinition["id"][];
+      }
+    | {
+        apparelType: "power armor";
+        installedMods: PowerArmorModDefinition["id"][];
+      }
+    | {
+        apparelType: "robot armor";
+        installedMods: RobotModDefinition["id"][];
+      }
+    | {
+        apparelType: "clothing" | "headgear" | "outfits" | "dog armor";
+        installedMods: ApparelModDefinition["id"][];
+      }
+  );
+
+//Ammo----------------------------------------------------------------------------------------------//
+
+export type PlayerCharacterAmmo = {
   definitionId: AmmoDefinition["id"];
   quantity: number;
 };
 
-export type CharacterPerk = {
+export type PlayerCharacterPerk = {
   definitionId: PerkDefinition["id"];
   rank: number;
 };
 
+export type PlayerCharacterSkills = Record<SkillName, CharacterSkill>;
+
+
+//Inventory----------------------------------------------------------------------------------------------//
+
 export type CharacterInventoryItem =
-  | CharacterWeapon
-  | CharacterApparel
-  | CharacterAmmo
-  | {
-      definitionId: ConsumableDefinition["id"];
-      quantity: number;
-    }
-  | {
-      definitionId: GenericItemDefinition["id"];
-      quantity: number;
-    };
+| PlayerCharacterWeapon
+| PlayerCharacterApparel
+| PlayerCharacterAmmo
+| {
+    definitionId: ConsumableDefinition["id"];
+    quantity: number;
+  }
+| {
+    definitionId: GenericItemDefinition["id"];
+    quantity: number;
+  };
+
+
+
+//Player Character----------------------------------------------------------------------------------------------//
 
 export type PlayerCharacter = {
   id: string;
@@ -104,15 +102,11 @@ export type PlayerCharacter = {
   name: string;
   playerName?: string;
   origin?: string; //Swap string for origin type when implemented.
+  gender?: "male" | "female" | "non-binary" | "other";
 
   level: number;
   xp?: number;
   totalXP?: number;
-
-  gender?: "male" | "female";
-
-  special: SpecialStats;
-  skills: PlayerSkills;
 
   maxHP: number;
   currentHP: number;
@@ -125,8 +119,10 @@ export type PlayerCharacter = {
   luckPoints?: number;
   caps: number;
 
+  special: SpecialStats;
+  skills: PlayerCharacterSkills; 
 
-  perks: CharacterPerk[];
+  perks: PlayerCharacterPerk[];
   inventory: CharacterInventoryItem[];
 
   notes?: string;
