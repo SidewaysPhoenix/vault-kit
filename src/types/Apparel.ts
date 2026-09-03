@@ -1,8 +1,12 @@
 import type { GameEffect } from "./rules/GameEffect";
 import type { ApparelModDefinition } from "./ApparelMod";
 import { Craftable } from "./rules/Crafting";
+import { ArmorModDefinition } from "./ArmorMod";
+import { PowerArmorModDefinition } from "./PowerArmorMod";
+import { RobotModDefinition } from "./RobotMod";
 
 export type ApparelDefinition = {
+  itemCategory: "apparel";
   id: string;
   name: string;
   apparelType: "armor" | "clothing" | "dog armor" | "headgear" | "outfits" | "power armor" | "robot armor";
@@ -18,7 +22,11 @@ export type ApparelDefinition = {
   cost: number;
   rarity: string;
 
-  mods: ApparelModDefinition["id"][]; //Need to set validation against the list of ApparelModDefinition ids to ensure that only valid mods are applied to the apparel.
+  allowedMods: 
+  | ApparelModDefinition["id"][]//Need to set validation against the list of ApparelModDefinition ids to ensure that only valid mods are applied to the apparel.
+  | ArmorModDefinition["id"][]
+  | PowerArmorModDefinition["id"][]
+  | RobotModDefinition["id"][]; 
 
   book?: string;
   bookPg?: number;

@@ -2,6 +2,13 @@ import type { WeaponDefinition } from "../Weapon";
 import type { ApparelDefinition } from "../Apparel";
 import type { AmmoDefinition } from "../Ammo";
 import type { PerkDefinition } from "../Perk";
+import type { ConsumableDefinition } from "../Consumable";
+import type { GenericItemDefinition } from "../GenericItem";
+import type { WeaponModDefinition } from "../WeaponMod";
+import type { ApparelModDefinition } from "../ApparelMod";
+import type { ArmorModDefinition } from "../ArmorMod";
+import type { PowerArmorModDefinition } from "../PowerArmorMod";
+import type { RobotModDefinition } from "../RobotMod";
 
 export type SpecialStats = {
   STR: number;
@@ -39,29 +46,33 @@ export type PlayerSkills = {
 };
 
 export type CharacterWeapon = {
-  instanceId: string;
+  instanceId: string; //Unique identifier for this specific instance of the weapon item. This is used to track the item in the character's inventory and to differentiate between multiple instances of the same weapon item. Ex: "weapon-001"
   definitionId: WeaponDefinition["id"];
 
   customName?: string;
 
   equipped: boolean;
 
-  currentAmmo?: number;
-  ammoId?: AmmoDefinition["id"];
-
-  installedMods: string[];
+  installedMods: WeaponModDefinition["id"][];
 };
 
 export type CharacterApparel = {
-  instanceId: string;
+  instanceId: string; //Unique identifier for this specific instance of the apparel item. This is used to track the item in the character's inventory and to differentiate between multiple instances of the same apparel item. Ex: "apparel-001"
   definitionId: ApparelDefinition["id"];
 
   equipped: boolean;
-  equippedLocation?: "head" | "torso" | "left arm" | "right arm" | "left leg" | "right leg" | "outfit";
-  currentHP?: number;
+  side?: "left" | "right";
   
+  currentHP?: number; //If apparel has HP, this is the current HP of the item.
+  physicalDRReduction?: number;
+  energyDRReduction?: number;
+  radiationDRReduction?: number;
 
-  installedMods: string[];
+  installedMods: 
+  | ApparelModDefinition["id"][]//Need to set validation against the list of ApparelModDefinition ids to ensure that only valid mods are applied to the apparel.
+  | ArmorModDefinition["id"][]
+  | PowerArmorModDefinition["id"][]
+  | RobotModDefinition["id"][];
 };
 
 export type CharacterAmmo = {
@@ -73,6 +84,19 @@ export type CharacterPerk = {
   definitionId: PerkDefinition["id"];
   rank: number;
 };
+
+export type CharacterInventoryItem =
+  | CharacterWeapon
+  | CharacterApparel
+  | CharacterAmmo
+  | {
+      definitionId: ConsumableDefinition["id"];
+      quantity: number;
+    }
+  | {
+      definitionId: GenericItemDefinition["id"];
+      quantity: number;
+    };
 
 export type PlayerCharacter = {
   id: string;
@@ -101,10 +125,9 @@ export type PlayerCharacter = {
   luckPoints?: number;
   caps: number;
 
-  weapons: CharacterWeapon[];
-  apparel: CharacterApparel[];
-  ammo: CharacterAmmo[];
+
   perks: CharacterPerk[];
+  inventory: CharacterInventoryItem[];
 
   notes?: string;
 };

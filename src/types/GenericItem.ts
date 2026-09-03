@@ -2,6 +2,7 @@ import { Craftable } from "./rules/Crafting";
 import type { GameEffect } from "./rules/GameEffect";
 
 export type GenericItemDefinition = {
+  itemCategory: "misc";
   id: string;
   name: string;
   description: string;

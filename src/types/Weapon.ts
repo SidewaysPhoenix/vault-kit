@@ -3,6 +3,7 @@ import type { Craftable } from "./rules/Crafting";
 import type { WeaponModDefinition } from "./WeaponMod";
 
 export type WeaponDefinition = {
+  itemCategory: "weapons";
   id: string;
   name: string;
   weaponType: "melee weapons" | "big guns" | "bows" | "energy weapons" | "explosives" | "melee weapons" | "small guns" | "throwing" |"unarmed" | "unique items" | "custom weapons" | "-";
@@ -23,7 +24,7 @@ export type WeaponDefinition = {
   cost: number;
   rarity: number;
 
-  mods: WeaponModDefinition["id"][]; //Need to set validation against the list of WeaponModDefinition ids to ensure that only valid mods are applied to the weapon.
+  allowedMods: WeaponModDefinition["id"][]; //Need to set validation against the list of WeaponModDefinition ids to ensure that only valid mods are applied to the weapon.
 
   book?: string;
   bookPg?: number;

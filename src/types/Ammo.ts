@@ -2,6 +2,7 @@ import { Craftable } from "./rules/Crafting";
 import type { GameEffect } from "./rules/GameEffect";
 
 export type AmmoDefinition = {
+  itemCategory: "ammo";
   id: string;
   name: string;
   book?: string;
@@ -16,5 +17,6 @@ export type AmmoDefinition = {
   rarity: number | string;
   qtyFoundBase?: number;
   qtyFoundDiceRoll?: number;
+  qtyFoundMultiplier?: number;
 
 } & Craftable;
